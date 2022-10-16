@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useContext } from "react";
+
+import { AdminFlagContext } from "./components/providers/AdminFlagProvider";
 import { Card } from "./components/Card"
 
 export const App = () => {
   //管理者フラグ
   //__useState(false)　初期値falseの設定　boolearn型で表示/非表示の切り替え等したい際にT/Fの切り替えで片方を表示。
-  const [isAdmin, setIsAdmin] = useState(false);
+  // const [isAdmin, setIsAdmin] = useState(false);
+
+  const { isAdmin, setIsAdmin } = useContext(AdminFlagContext);
 
   //[切り替え]押下(おうか)時 読み方初めて知った。
-  const onClickSwitch = () =>
-    setIsAdmin(!isAdmin);
+  const onClickSwitch = () => setIsAdmin(!isAdmin);
 
   return (
     <div>

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { AdminFlagProvider } from './components/providers/AdminFlagProvider';
 
 /*
+//デフォルト記載
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,15 +15,22 @@ root.render(
 );
 */
 
-
-
+/*
+//テキスト記載
 ReactDOM.render(
   <AdminFlagProvider>
     <App />
   </AdminFlagProvider>,
   document.getElementById("root")
 );
+*/
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <AdminFlagProvider>
+    <App />
+  </AdminFlagProvider>,
+);
 
 
 // If you want to start measuring performance in your app, pass a function
